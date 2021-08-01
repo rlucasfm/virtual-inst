@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TonesynthService } from '../services/tonesynth.service';
 
 @Component({
   selector: 'app-synth2',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Synth2Component implements OnInit {
 
-  constructor() { }
+  constructor(private tonesynthService: TonesynthService) { }
 
   ngOnInit(): void {
+  }
+
+  play_audio(key: string): void {
+    this.tonesynthService.play_note(key)
   }
 
 }

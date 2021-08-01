@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { Synth1Component } from './synth1/synth1.component';
 import { Synth2Component } from './synth2/synth2.component';
 import { VolumeknobComponent } from './volumeknob/volumeknob.component';
+import { InicialComponent } from './inicial/inicial.component';
+import { VolumeService } from './services/volume.service';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,14 @@ import { VolumeknobComponent } from './volumeknob/volumeknob.component';
     Synth1Component,
     Synth2Component,
     VolumeknobComponent,
+    InicialComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [VolumeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
